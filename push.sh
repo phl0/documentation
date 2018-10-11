@@ -1,3 +1,5 @@
+  set -e
+  pwd
   mkdir $HOME/_output/
   #copy generated apk from build folder to the folder just created
 
@@ -5,13 +7,15 @@
   #go to home and git setup
 
   cd $HOME
+  pwd
   git config --global user.email "travis@travis-ci.org"
   git config --global user.name "Travis"
   # Clone the repository in the folder buildApk
 
-  git clone --quiet --branch travis_test=https://phl0:$GITHUB_API_KEY@github.com/phl0/documentation travis_test > /dev/null
+  git clone --quiet --branch=travis_test https://phl0:$GITHUB_API_KEY@github.com/phl0/documentation travis_test > /dev/null
 
   cd travis_test
+  pwd
   cp -Rf _build/* .
 
   git add -f.
