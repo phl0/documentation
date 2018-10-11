@@ -1,4 +1,6 @@
   PWD=$(pwd)
+  echo $PWD
+  find . -name "_build"
   mkdir $HOME/_output/
   #copy generated apk from build folder to the folder just created
 
@@ -17,7 +19,7 @@
   pwd
   cp -Rf $PWD/_build/* .
 
-  git add -f.
+  git add -f .
   git remote add origin https://phl0:$GITHUB_API_KEY@github.com/phl0/documentation.git
    . git add -f 
   git commit -m "Travis build $ TRAVIS_BUILD_NUMBER pushed [skip ci] "
