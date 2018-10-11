@@ -1,9 +1,10 @@
 before_install:
-- sudo apt-get update 
+- sudo apt-get update
 - sudo apt-get install texlive-latex-extra texlive-fonts-recommended
 script:
 - mkdir _build
 - pdflatex -output-directory _build ./DAPNET\ 2.0\ Software\ internals.tex
 after_success:
+  skip_cleanup: true
 - chmod +x ./push.sh
 - ./push.sh
