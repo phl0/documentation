@@ -4,9 +4,8 @@ before_install:
 script:
 - mkdir _build
 - pdflatex -output-directory _build ./DAPNET\ 2.0\ Software\ internals.tex
-after_success:
-- chmod +x ./push.sh
-- "./push.sh"
-env:
-  global:
-    secure: yvkoQLy0B4mqZwQr9nHN+a8jggvoxQzTfrsOCNFs/ZSzEzo5CRDkP3557HfPvNHFGkJVBx4bZsdGbdCQ0lGhoDx3fxisvN5+tMOd1FHXkjz7naEoCbhE7q7iXSY9Xm96ypePyOunS3A6aMKwofR/bgo3NEqaAOcewhHLjOMsPRlia4vWLAaNftQtVCo8YSkyYidoDszBeva5W7L6ljvmKCK2BV/RshLo/+hD7cN34g1P5XPwAwXk4XojszFLbY0cLBurbD4Zk/uqKfDA9EolmU1Mq8MDuFZMwYxnnqdND0U/c9rcrSfmyArQsJbOmaDaJkAGDVxlAsXL/L7vm9csSwDGGIaJfIKwr3EVEEaJO7G5ab0NBibj/u5CYT7GNn6w/9NyxpAdVPQqOhE33MTcLxyraJJsDszdbVf90Wo0Nal3vHWUy+LglIeKl30gDflXfArkQEz4z+ZC/x2eW4MZR7jY7NUchLh/ZqFvIpLUv/h7fLmaVit3EyPkEtMpj4RHOdQNIsNel+czmK1q5G6/MTL7uFzx68IoblTJekHaRlkZlLLxRpTLk/4NboVYpGcP+LbmWoSAH2NuP1RkG4Fqw/FYm2hXFQztvY7ekVk31q21ZYqFEVrpGHSX36t2Bpe2BTQbNMk4vM831QL70Fl2VkjfsUnU12jp8/bTwjN/qPM=
+deploy:
+  provider: releases
+  api_key: "895abb5b5a142bbbfea4e271cb2c3698c720ffeb"
+    file: "_build/DAPNET\ 2.0\ Software\ internals.pdf"
+    skip_cleanup: true
