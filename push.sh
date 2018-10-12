@@ -1,5 +1,7 @@
   PWD=$(pwd)
   echo $PWD
+  cd _build
+  ls -al
   find . -name "_build"
   ls -al $PWD/_build
 
