@@ -1,4 +1,5 @@
-  PWD=$(pwd)
+  echo $TRAVIS_BUILD_DIR
+  BUILDDIR=$(pwd)
   echo $PWD
   cd _build
   ls -al
@@ -6,7 +7,6 @@
   ls -al $PWD/_build
 
   cd $HOME
-  pwd
   git config --global user.email "travis@travis-ci.org"
   git config --global user.name "Travis"
   # Clone the repository in the folder buildApk
@@ -15,11 +15,9 @@
 
   cd travis_test
   pwd
-  cp -Rf $PWD/_build/* .
+  cp -Rf $TRAVIS_BUILD_DIR/_build/DAPNET\ 2.0\ Software\ internals.pdf .
 
-  git add -f .
   git remote add origin https://phl0:$GITHUB_API_KEY@github.com/phl0/documentation.git
-  git add -f .
-  git commit -m "Travis build $ TRAVIS_BUILD_NUMBER pushed [skip ci] "
+  git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed [skip ci] "
   git push origin travis_test -fq> / dev / null
   echo -e "Done\n"
