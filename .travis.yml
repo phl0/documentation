@@ -7,5 +7,5 @@ script:
 deploy:
   provider: releases
   api_key: "895abb5b5a142bbbfea4e271cb2c3698c720ffeb"
-    file: "_build/DAPNET\ 2.0\ Software\ internals.pdf"
-    skip_cleanup: true
+  file: "_build/DAPNET\ 2.0\ Software\ internals.pdf"
+  skip_cleanup: true
