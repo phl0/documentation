@@ -6,6 +6,8 @@ script:
 - pdflatex -output-directory _build ./DAPNET\ 2.0\ Software\ internals.tex
 deploy:
   provider: releases
-  api_key: "895abb5b5a142bbbfea4e271cb2c3698c720ffeb"
-  file: "_build/DAPNET\ 2.0\ Software\ internals.pdf"
-  skip_cleanup: true
+  api_key:
+    secure: IGBADINz7x+w4eKSsk+co3IafwTrJiU2ogTcsO2aZYhf8pefyC0LieGYMs9YuglbjWhtbcZOQYJV1XL5GamIyXyV2JEQFGi3Roc05erVAD09l7DM6IoZjN0e2SrJmjbS+2wOqaUI6MqxOs6sczgi+7i8iWagc7IsVPenw+sA3fFIXQOe1xyqUqkkfXWSmX4Qlo7Cn6EqZttbMkfd5DWsJ2Lsn5r4GjnTKpAUby29Hf7XRubwKRTfvym4sUVp07ZgAOdeFnhslXQzC65j4nBIyWSadBT0QqELfo6ChwZ65TmYe63PVehd9AF2kGHE+rzYtqw7sc8E12Xmi1qSQceKQAXmG6fG0ACWg6ZWthJofjCKA4TrMirf0QJdAESsnNaHWJwbMBp0HGQjNQvH9jItOXccDghD9bAmMMyDSbet4MaEe8eMmkZ6B7MacYYlWCnZJYMqHOLE+JddJ7T9g6fAA9zNlIyenRA9lidKI5OLj6s5ama3+fFi0o+pDmStYhCSqcb3/j6IEqVI5xuNsT78ERt/u1RrWiRN9Gc0Kf6jSxdIjkTci4KzsHDKztQ4tD3HEXhsAGlqTAFtIfDxWPuRqCCFrBNh/Rpyoa4de5BNGGS8127CTqgFf95vSb4aj7Tun+eGAPV/lsFRU8fZCC3/U3B1dJHwcop9MrhUIm4jLzs=
+  file: _build/DAPNET\ 2.0\ Software\ internals.pdf
+  on:
+    repo: phl0/documentation
